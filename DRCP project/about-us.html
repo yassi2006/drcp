@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - DRCP, IFM</title>
+    <link rel="stylesheet" href="style_v3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <span style="font-size: 1.5em; font-weight: bold; color: #fff;">DRCP - IFM</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-us.html" class="active">About Us</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="timetable.html">Timetable</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="https://www.ifm.ac.tz/" target="_blank" class="ifm-link">Visit IFM Main Site</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-content">
+            <div class="container">
+                <h2>About the Directorate of Research Consultancy and Publication (DRCP)</h2>
+                <p>The Directorate of Research, Consultancy and Publication (DRCP) is a core strategic arm of the Institute of Finance Management (IFM). Established to champion a vibrant culture of inquiry and innovation, DRCP serves as the primary engine for generating new knowledge, applying expertise to real-world challenges, and disseminating impactful findings across various sectors.</p>
+
+                <h3 id="mission-vision">Our Mission & Vision</h3>
+                <p>DRCP is guided by a clear set of principles and aspirations that drive our daily operations and long-term strategic planning.</p>
+                <blockquote>
+                    "<strong>Mission:</strong> To foster and facilitate high-quality research, provide professional and evidence-based consultancy services, and promote the timely publication and dissemination of scholarly work, thereby contributing to national development and global knowledge."
+                </blockquote>
+                <blockquote>
+                    "<strong>Vision:</strong> To be a leading center of excellence in research, consultancy, and publication, recognized for its impactful contributions to financial management, economic development, and public policy in Tanzania and beyond."
+                </blockquote>
+
+                <h3>Key Functions and Objectives</h3>
+                <p>To achieve our mission and vision, DRCP focuses on several key areas:</p>
+                <ul>
+                    <li><strong>Promoting Research Excellence:</strong> To encourage, support, and facilitate rigorous, ethical, and relevant research among faculty, staff, and postgraduate students. This includes providing grants, training, and a conducive research environment.</li>
+                    <li><strong>Delivering Expert Consultancy:</strong> To offer specialized, data-driven consultancy services to government entities, the private sector, and non-governmental organizations, addressing their unique challenges and contributing to informed decision-making.</li>
+                    <li><strong>Enhancing Publication & Dissemination:</strong> To ensure that research findings are widely published in reputable journals, books, and other scholarly outlets, and effectively disseminated to relevant stakeholders and the public.</li>
+                    <li><strong>Building Research Capacity:</strong> To organize workshops, seminars, and training programs aimed at enhancing the research and consultancy skills of IFM staff and students, as well as external professionals.</li>
+                    <li><strong>Fostering Collaboration:</strong> To establish and maintain strong collaborations with local, regional, and international academic institutions, research organizations, and industry partners.</li>
+                </ul>
+
+                <h3 id="our-team">Our Team</h3>
+                <p>Our Directorate is led by experienced professionals and supported by dedicated administrative staff. You can find detailed profiles on our <a href="resources.html#faculty-staff">Faculty & Staff section on the Resources page</a>.</p>
+
+                <h3 id="contact-us">Contact Us</h3>
+                <p>We welcome inquiries regarding our research initiatives, consultancy services, or publications. Please feel free to reach out to us:</p>
+                <ul>
+                    <li><strong>Office Location:</strong> IFM Main Campus, Directorate of Research Consultancy and Publication Building.</li>
+                    <li><strong>Email:</strong> <a href="mailto:drcp@ifm.ac.tz">drcp@ifm.ac.tz</a></li>
+                    <li><strong>Phone:</strong> +255 22 211 000 (Main Office) | +255 761 710 761 (Director's Office)</li>
+                    <li><strong>Operating Hours:</strong> Monday - Friday, 8:00 AM - 5:00 PM (EAT)</li>
+                </ul>
+                <p>We look forward to collaborating with you!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-media">
+                <a href="https://www.facebook.com/IFM" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/ifm" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@ifm" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p>&copy; 2025 Directorate of Research Consultancy and Publication, IFM. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        
+        mobileToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('open');
+        });
+
+        // No need for dropdown specific JS if "About Us" is not a dropdown
+        // If you add other dropdowns later, you'll need to re-introduce that logic.
+    </script>
+</body>
+</html>

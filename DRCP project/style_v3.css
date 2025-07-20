@@ -1,0 +1,581 @@
+/* General Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #343a40;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #004d99; /* IFM Primary Blue */
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+nav ul.main-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul.main-nav li {
+    margin-left: 25px;
+    position: relative;
+}
+
+nav ul.main-nav li:first-child {
+    margin-left: 0;
+}
+
+nav ul.main-nav li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: 600; /* Make navigation links bolder */
+}
+
+nav ul.main-nav li a:hover,
+nav ul.main-nav li a.active {
+    background-color: #003366; /* Darker Blue on Hover */
+}
+
+/* Dropdown Menu */
+.dropdown .dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 10px 15px;
+    font-size: inherit;
+    border: none;
+    cursor: pointer;
+    font-weight: 600; /* Make dropdown buttons bolder */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #003366;
+    min-width: 200px; /* Wider dropdown */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    top: calc(100% + 5px); /* Position slightly below the nav item */
+    left: 0;
+    overflow: hidden; /* Ensures border-radius applies nicely */
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 18px; /* More padding */
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+    font-weight: normal; /* Normal weight for dropdown items */
+}
+
+.dropdown-content a:hover {
+    background-color: #002244;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.ifm-link {
+    background-color: #ffc107; /* IFM Yellow */
+    color: #004d99 !important;
+    font-weight: bold;
+}
+
+.ifm-link:hover {
+    background-color: #e0a800;
+}
+
+/* Mobile Navigation */
+.mobile-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px; /* Space between lines */
+}
+
+.mobile-toggle span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    border-radius: 3px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #fff;
+    padding: 80px 0;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.hero-content h1 {
+    font-size: 3.2em; /* Slightly larger heading */
+    color: #004d99;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.25em; /* Slightly larger paragraph */
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #007bff; /* Bootstrap Primary Blue */
+    color: white;
+    padding: 14px 30px; /* Larger button */
+    text-decoration: none;
+    border-radius: 8px; /* More rounded corners */
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right; /* Align image to the right */
+}
+
+.hero-image img {
+    max-width: 90%; /* Adjust image size */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Stronger shadow */
+}
+
+/* Features Section */
+.features {
+    background-color: #e9ecef; /* Light Grey */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted min-width */
+    gap: 30px;
+}
+
+.feature-item {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* Slightly stronger shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.feature-item i {
+    font-size: 3em; /* Larger icons */
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    color: #343a40;
+    margin-bottom: 10px;
+    font-size: 1.6em;
+}
+
+.feature-item p {
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+/* Latest News Section */
+.latest-news {
+    padding: 70px 0;
+    background-color: #f8f9fa;
+}
+
+.latest-news h2 {
+    color: #004d99;
+    font-size: 2.8em; /* Larger heading */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Adjusted min-width */
+    gap: 30px;
+}
+
+.news-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.news-item img {
+    width: 100%;
+    height: 220px; /* Slightly taller images */
+    object-fit: cover;
+}
+
+.news-item .news-content { /* Added a div for content padding */
+    padding: 20px;
+}
+
+.news-item h3 {
+    color: #343a40;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.news-item p {
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+.news-item a {
+    display: inline-block;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.news-item a:hover {
+    color: #0056b3;
+}
+
+.view-all {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.view-all a {
+    display: inline-block;
+    padding: 12px 25px; /* Larger button */
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.view-all a:hover {
+    background-color: #495057;
+    transform: translateY(-2px);
+}
+
+/* Page Content for other pages */
+.page-content {
+    background-color: #ffffff;
+    padding: 40px 0 60px 0; /* More padding at bottom */
+    min-height: 500px;
+}
+
+.page-content h2 {
+    color: #004d99;
+    margin-bottom: 25px;
+    font-size: 2.5em; /* Larger heading */
+    text-align: center;
+}
+
+.page-content h3 {
+    color: #0056b3; /* Slightly darker blue for subheadings */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.page-content p, .page-content ul, .page-content ol {
+    margin-bottom: 1.2em; /* More line spacing */
+    text-align: justify;
+    line-height: 1.8; /* Improve readability */
+}
+
+.page-content ul, .page-content ol {
+    padding-left: 30px; /* More indent */
+}
+
+.page-content li {
+    margin-bottom: 0.8em; /* Space between list items */
+}
+
+.page-content blockquote {
+    background-color: #f0f2f5;
+    border-left: 5px solid #007bff;
+    margin: 20px 0;
+    padding: 15px 20px;
+    font-style: italic;
+    color: #555;
+    border-radius: 4px;
+}
+
+.page-content blockquote p {
+    margin-bottom: 0;
+}
+
+
+/* Tables Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Ensures border-radius works */
+}
+
+table th, table td {
+    border: 1px solid #dee2e6; /* Lighter border */
+    padding: 15px 18px; /* More padding */
+    text-align: left;
+}
+
+table th {
+    background-color: #004d99;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 80px;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-media {
+    margin-bottom: 20px;
+}
+
+.social-media a {
+    color: white;
+    font-size: 28px;
+    margin: 0 15px;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.social-media a:hover {
+    opacity: 1;
+    transform: translateY(-3px); /* Slight lift */
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .hero-image {
+        order: -1;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+
+    .page-content h2 {
+        font-size: 2em;
+    }
+    .page-content h3 {
+        font-size: 1.5em;
+    }
+ }
+
+ @media screen and (max-width: 768px) {
+    nav {
+        display: none;
+        width: 100%;
+        background-color: #004d99;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        max-height: calc(100vh - 60px); /* Limit height to viewport */
+        overflow-y: auto; /* Enable scrolling if content overflows */
+    }
+
+    nav.open {
+        display: block;
+    }
+
+    nav ul.main-nav {
+        flex-direction: column;
+        align-items: flex-start; /* Align left */
+        padding: 10px 20px;
+    }
+
+    nav ul.main-nav li {
+        margin: 0 0 15px 0;
+        width: 100%;
+    }
+
+    nav ul.main-nav li a, .dropdown .dropbtn {
+        padding: 12px 16px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        width: 100%;
+        border-radius: 0; /* Remove border-radius for static dropdown */
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.open .dropdown-content {
+        display: block; /* Controlled by JS click */
+    }
+
+    .mobile-toggle {
+        display: flex;
+    }
+
+    header .container {
+        padding: 15px 20px;
+    }
+
+    .logo a {
+        font-size: 1.6em;
+    }
+
+    /* Table Responsiveness for Mobile */
+    table, table thead, table tbody, table th, table td, table tr {
+        display: block;
+    }
+    table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    table tr {
+        border: 1px solid #ccc;
+        margin-bottom: 15px;
+        border-radius: 8px; /* Apply to each row */
+        overflow: hidden;
+    }
+    table td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+    table td:last-child {
+        border-bottom: 0;
+    }
+    table td:before {
+        position: absolute;
+        top: 0; /* Adjust top for better alignment */
+        left: 0;
+        width: 45%; /* Adjusted width */
+        padding: 15px; /* Match td padding */
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        background-color: #f5f5f5; /* Light background for label */
+        border-right: 1px solid #eee;
+        height: 100%; /* Make background fill cell */
+        display: flex;
+        align-items: center; /* Vertically center label */
+        box-sizing: border-box; /* Include padding in width */
+    }
+ }
